@@ -120,7 +120,9 @@ local TENTHS_TRESHOLD = 1
 -- Trinket filter - mostly for trinket procs, delete or wrap into comment block --[[  ]] if you dont want to track those
 local TRINKET_FILTER = {
 		CreateSpellEntry( 67671 ), -- Fury(Banner of Victory)
-
+		CreateSpellEntry( 71564 ), -- Deadly Precision (Nevermelting Ice Crystal)
+		CreateSpellEntry( 67669 ), -- Elusive Power (Abyssal Rune)
+		
 		CreateSpellEntry( 60229 ), -- Greatness (Greatness - Strength)
 		CreateSpellEntry( 60233 ), -- Greatness (Greatness - Agility)
 		CreateSpellEntry( 60234 ), -- Greatness (Greatness - Intellect)
@@ -193,23 +195,29 @@ Examples:
 
 local CLASS_FILTERS = {
 		DEATHKNIGHT = { 
-			target = { 
-				CreateSpellEntry( 59921 ), -- Frost Fever
-				CreateSpellEntry( 59879 ), -- Blood Plague
+target = {
+				CreateSpellEntry( 55095 ), -- Frost Fever
+				CreateSpellEntry( 55078 ), -- Blood Plague
 				CreateSpellEntry( 81130 ), -- Scarlet Fever
+				CreateSpellEntry( 50536 ), -- Unholy Blight
+				CreateSpellEntry( 65142 ), -- Ebon Plague
  
 			},
 			player = {
 				CreateSpellEntry( 59052 ), -- Freezing Fog
 				CreateSpellEntry( 51124 ), -- Killing Machine
 				CreateSpellEntry( 49016 ), -- Unholy Frenzy
-				CreateSpellEntry( 49222 ), -- Bone Shield
 				CreateSpellEntry( 57330 ), -- Horn of Winter
+				CreateSpellEntry( 70654 ), -- Blood Armor
+				CreateSpellEntry( 77535 ), -- Blood Shield
+				CreateSpellEntry( 55233 ), -- Vampiric Blood
+				CreateSpellEntry( 81141 ), -- Blood Swarm
+				CreateSpellEntry( 70654 ), -- Blood Armor
+				CreateSpellEntry( 45529 ), -- Blood Tap
 			},
 			procs = {
-				CreateSpellEntry( 53365 ), -- Unholy Strength				
-			}
-		},
+				CreateSpellEntry( 53365 ), -- Unholy Strength
+			}		},
 		DRUID = { 
 			target = { 
 				CreateSpellEntry( 48438 ), -- Wild Growth
@@ -244,7 +252,7 @@ local CLASS_FILTERS = {
 				CreateSpellEntry( 467 ), -- Thorns
 				CreateSpellEntry( 78675 ), -- Solar Beam
 				CreateSpellEntry( 93401 ), -- Sunfire
- 
+				CreateSpellEntry( 80951 ), -- Pulverize
 			},
 			player = {
 				CreateSpellEntry( 48505 ), -- Starfall
@@ -312,111 +320,135 @@ local CLASS_FILTERS = {
 		MAGE = {
 			target = { 
 				CreateSpellEntry( 44457 ), -- Living Bomb
+				CreateSpellEntry( 118 ), -- Polymorph
+				CreateSpellEntry( 28271 ), -- Polymorph Turtle
+				CreateSpellEntry( 31589 ), -- Slow
+				CreateSpellEntry( 116 ), -- Frostbolt
+				CreateSpellEntry( 120 ), -- Cone of Cold
+				CreateSpellEntry( 122 ), -- Frost Nova
+				CreateSpellEntry( 44614 ), -- Frostfire Bolt
+				CreateSpellEntry( 92315 ), -- Pyroblast!
+				CreateSpellEntry( 12654 ), -- Ignite
+				CreateSpellEntry( 22959 ), -- Critical Mass
+				CreateSpellEntry( 83853 ), -- Combustion
 			},
 			player = {
-				CreateSpellEntry( 30451 ), -- Arcane Blast
-				CreateSpellEntry( 1463 ), -- Mana Shield
-				CreateSpellEntry( 11426 ), -- Ice Barrier
-				CreateSpellEntry( 12472 ), -- Icy Veins
+				CreateSpellEntry( 36032 ), -- Arcane Blast
 				CreateSpellEntry( 12042 ), -- Arcane Power
+				CreateSpellEntry( 32612 ), -- Invisibility
+				CreateSpellEntry( 1463 ), -- Mana Shield
+				CreateSpellEntry( 543 ), -- Mage Ward
+				CreateSpellEntry( 11426 ), -- Ice Barrier
+				CreateSpellEntry( 45438 ), -- Ice Block
+				CreateSpellEntry( 12472 ), -- Icy Veins
+				CreateSpellEntry( 130 ), -- Slow Fall
 			},
 			procs = {
-				CreateSpellEntry( 83074 ), -- Fingers of Frost	
-				CreateSpellEntry( 54486 ), -- Missile Barrage Proc		
+				CreateSpellEntry( 83074 ), -- Fingers of Frost
+				CreateSpellEntry( 79683 ), -- Arcane Missiles!
+				CreateSpellEntry( 48108 ), -- Hot Streak
+				CreateSpellEntry( 64343 ), -- Impact
 				CreateSpellEntry( 70753 ), -- Pushing the Limit (2pc t10)
 			},
 		},
 		PALADIN = { 
 			target = {
-				CreateSpellEntry( 31803 ), -- Censure
-				CreateSpellEntry( 20066 ), -- Repentance
-				CreateSpellEntry( 10308 ), -- Hammer of Justice
-			},
-			player = {
-				CreateSpellEntry( 642 ), -- Divine Shield
-				CreateSpellEntry( 498 ), -- Divine Protection
-				CreateSpellEntry( 31884 ), -- Avenging Wrath
-				CreateSpellEntry( 85696 ), -- Zealotry
-				CreateSpellEntry( 25771 ), -- Debuff: Forbearance
-                   		CreateSpellEntry( 1044 ), -- Hand of Freedom
-				CreateSpellEntry( 90174 ), -- Hand of Light
-			},
-			procs = {
-				CreateSpellEntry( 59578 ), -- The Art of War
-				CreateSpellEntry( 71187 ), -- Libram of Three Truths			
+                CreateSpellEntry( 31803 ), -- Censure --
+                CreateSpellEntry( 20066 ), -- Repentance --
+                CreateSpellEntry( 853 ), -- Hammer of Justice --
+                CreateSpellEntry( 31935 ), -- Avenger's Shield --
+                CreateSpellEntry( 20170 ), -- Seal of Justice --
+                CreateSpellEntry( 26017 ), -- Vindication --
+                CreateSpellEntry( 68055 ), -- Judgements of the Just --
+            },
+            player = {
+                CreateSpellEntry( 642 ), -- Divine Shield
+                CreateSpellEntry( 31850 ), -- Ardent Defender
+                CreateSpellEntry( 498 ), -- Divine Protection
+                CreateSpellEntry( 31884 ), -- Avenging Wrath
+                CreateSpellEntry( 85696 ), -- Zealotry
+                CreateSpellEntry( 25771 ), -- Debuff: Forbearance
+                CreateSpellEntry( 1044 ), -- Hand of Freedom
+                CreateSpellEntry( 1022 ), -- Hand of Protection
+                CreateSpellEntry( 1038 ), -- Hand of Salvation
+ 
+            },
+            procs = {
+                CreateSpellEntry( 59578 ), -- The Art of War
+                CreateSpellEntry( 90174 ), -- Hand of Light
+                CreateSpellEntry( 71396 ), -- Rage of the Fallen			
 			},
 		},
 		PRIEST = { 
 			target = { 
-				CreateSpellEntry( 20706 ), -- Power Word: Shield --
-                CreateSpellEntry( 34914 ), -- Vampiric Touch --
-                CreateSpellEntry( 139 ), -- Renew --
-                CreateSpellEntry( 41635 ), -- Prayer of Mending --
-                CreateSpellEntry( 33206 ), -- Pain Suppression --
-                CreateSpellEntry( 589 ), -- Shadow Word: Pain --
-                CreateSpellEntry( 2944 ), -- Devouring Plague --
-                CreateSpellEntry( 40135 ), -- Shackle Undead --
-                CreateSpellEntry( 14914 ), -- Holy Fire --
+				CreateSpellEntry( 17 ), -- Power Word: Shield
+                CreateSpellEntry( 6788, true, nil, 1 ), -- Weakened Soul
+                CreateSpellEntry( 139 ), -- Renew
+                CreateSpellEntry( 33076 ), -- Prayer of Mending
+                CreateSpellEntry( 552 ), -- Abolish Disease
+                CreateSpellEntry( 63877 ), -- Pain Suppression
+                CreateSpellEntry( 34914, false, nil, nil, 34914 ), -- Vampiric Touch
+                CreateSpellEntry( 589 ), -- Shadow Word: Pain
+                CreateSpellEntry( 2944 ), -- Devouring Plague
+                CreateSpellEntry( 48153 ), -- Guardian Spirit
             },
             player = {
-                CreateSpellEntry( 20706 ), -- Power Word: Shield --
-                CreateSpellEntry( 33206 ), -- Pain Suppression --
-                CreateSpellEntry( 77487 ), -- Shadow Orb --
-                CreateSpellEntry( 81661 ), -- Evangelism --
-                CreateSpellEntry( 81700 ), -- Archangel --
-                CreateSpellEntry( 87153 ), -- Archangel --
-                CreateSpellEntry( 10060 ), -- Power Infusion --
-                CreateSpellEntry( 47585 ), -- Dispersion --
-                CreateSpellEntry( 41635 ), -- Prayer of Mending --
-                CreateSpellEntry( 139 ), -- Renew --
+                CreateSpellEntry( 10060 ), -- Power Infusion
+                CreateSpellEntry( 588 ), -- Inner Fire
+                CreateSpellEntry( 47585 ), -- Dispersion
             },
             procs = {
+                CreateSpellEntry( 63733 ), -- Serendipity
+                CreateSpellEntry( 88690 ), -- Surge of Light
+                CreateSpellEntry( 77487 ), -- Shadow Orb
                 CreateSpellEntry( 71572 ), -- Cultivated Power --   
-			},
-			procs = {
-
 			},
 		},
 		ROGUE = { 
 			target = { 
-				CreateSpellEntry( 1833 ), -- Cheap Shot
-				CreateSpellEntry( 408 ), -- Kidney Shot
-				CreateSpellEntry( 1776 ), -- Gouge   
-				CreateSpellEntry( 2094 ), -- Blind
-				CreateSpellEntry( 8647 ), -- Expose Armor
-				CreateSpellEntry( 51722 ), -- Dismantle
-				CreateSpellEntry( 43233 ), -- Deadly Poison
-				CreateSpellEntry( 43235 ), -- Wound Posion
-				CreateSpellEntry( 3776 ),  -- Crippling Poison      
-				CreateSpellEntry( 5237 ), -- Mind-Numbling Poison
-				CreateSpellEntry( 6770 ), -- Sap			
-				CreateSpellEntry( 1943 ), -- Rupture
-				CreateSpellEntry( 703 ), -- Garrote
-				CreateSpellEntry( 79140 ), -- vendetta
-			},
-			player = { 
-				CreateSpellEntry( 32645 ), -- Envenom
-				CreateSpellEntry( 5171 ), -- Slice and Dice			
-				CreateSpellEntry( 60177 ), -- Hunger for Blood
-				CreateSpellEntry( 55503 ), -- Lifeblood
-				CreateSpellEntry( 79140 ), -- vendetta
-				CreateSpellEntry( 73651 ), -- Recuperate
-			},
-			procs = {
-			
+				CreateSpellEntry( 1833 ), -- Cheap Shot --
+                CreateSpellEntry( 408 ), -- Kidney Shot --
+                CreateSpellEntry( 1776 ), -- Gouge   --
+                CreateSpellEntry( 2094 ), -- Blind --
+                CreateSpellEntry( 8647 ), -- Expose Armor --
+                CreateSpellEntry( 51722 ), -- Dismantle --
+                CreateSpellEntry( 2818 ), -- Deadly Poison --
+                CreateSpellEntry( 13218 ), -- Wound Posion --
+                CreateSpellEntry( 3409 ),  -- Crippling Poison 
+                CreateSpellEntry( 5760 ), -- Mind-Numbing Poison --
+                CreateSpellEntry( 6770 ), -- Sap
+                CreateSpellEntry( 1943 ), -- Rupture --
+                CreateSpellEntry( 703 ), -- Garrote --
+                CreateSpellEntry( 79140 ), -- vendetta
+                CreateSpellEntry( 16511 ), -- Hemorrhage
+            },
+            player = {
+                CreateSpellEntry( 32645 ), -- Envenom --
+                CreateSpellEntry( 2983 ), -- Sprint --
+                CreateSpellEntry( 5277 ), -- Evasion --
+                CreateSpellEntry( 1776 ), -- Gouge --
+                CreateSpellEntry( 51713 ), -- Shadow Dance --
+                CreateSpellEntry( 1966 ), -- Feint --
+                CreateSpellEntry( 73651 ), -- Recuperate --
+                CreateSpellEntry( 5171 ), -- Slice and Dice
+                CreateSpellEntry( 55503 ), -- Lifeblood --
+				CreateSpellEntry( 13877 ), -- Blade Flurry --
+            },
+            procs = {
+                CreateSpellEntry( 71396 ), -- Rage of the Fallen
 			},
 		},
 		SHAMAN = {
-			CreateSpellEntry( 974 ), -- Earth Shield
+			target = {
+				CreateSpellEntry( 974 ), -- Earth Shield
 				CreateSpellEntry( 8050), -- Flame Shock
 				CreateSpellEntry( 8056 ), -- Frost Shock
 				CreateSpellEntry( 17364 ), -- Storm Strike
 				CreateSpellEntry( 61295 ), -- Riptide
 				CreateSpellEntry( 51945 ), -- Earthliving
 				CreateSpellEntry( 77657 ), -- Searing Flames
- 
 			},
-			player = {
+				player = {
 				CreateSpellEntry( 324 ), -- Lightning Shield
 				CreateSpellEntry( 52127 ), -- Water Shield
 				CreateSpellEntry( 974 ), -- Earth Shield
@@ -465,6 +497,11 @@ local CLASS_FILTERS = {
 				CreateSpellEntry( 1715 ), -- Hamstring
 				CreateSpellEntry( 50725 ), -- Vigilance
 				CreateSpellEntry( 676 ), -- Disarm
+				CreateSpellEntry( 29703 ), -- Daze (Shield Bash)
+				CreateSpellEntry( 18498 ), -- Gag Order
+				CreateSpellEntry( 12809 ), -- Concussion Blow
+				CreateSpellEntry( 6343 ), -- Thunderclap
+ 
 			},
 			player = {
 				CreateSpellEntry( 469 ), -- Commanding Shout
@@ -474,7 +511,8 @@ local CLASS_FILTERS = {
 				CreateSpellEntry( 871 ), -- Shield Wall
 				CreateSpellEntry( 1719 ), -- Recklessness
 				CreateSpellEntry( 20230 ), -- Retaliation
-                CreateSpellEntry( 2565 ), -- Shield Block
+				CreateSpellEntry( 2565 ), -- Shield Block
+                CreateSpellEntry( 12975 ), -- Last Stand
 			},
 			procs = {
 				
@@ -1116,7 +1154,7 @@ if ( LAYOUT == 1 ) then
 
 	local frame = CreateAuraBarFrame( dataSource, oUF_Tukz_player );
 	local yOffset = 1;
-	if ( playerClass == "DEATHKNIGHT" or playerClass == "SHAMAN" ) then
+	if ( playerClass == "DEATHKNIGHT" or playerClass == "SHAMAN" or playerClass == "PALADIN" or playerClass == "DRUID" or playerClass == "WARLOCK") then
 		yOffset = yOffset + 8;
 	end
 	frame:SetPoint( "BOTTOMLEFT", oUF_Tukz_player, "TOPLEFT", 0, yOffset );
@@ -1141,7 +1179,7 @@ elseif ( LAYOUT == 2 ) then
 	
 	local playerFrame = CreateAuraBarFrame( playerDataSource, oUF_Tukz_player );	
 	playerFrame:SetHiddenHeight( -yOffset );
-	if ( playerClass == "DEATHKNIGHT" or playerClass == "SHAMAN" ) then
+	if ( playerClass == "DEATHKNIGHT" or playerClass == "SHAMAN" or playerClass == "PALADIN" or playerClass == "DRUID" or playerClass == "WARLOCK") then
 		playerFrame:SetPoint( "BOTTOMLEFT", oUF_Tukz_player, "TOPLEFT", 0, yOffset + 8 );
 		playerFrame:SetPoint( "BOTTOMRIGHT", oUF_Tukz_player, "TOPRIGHT", 0, yOffset + 8 );
 	else
@@ -1174,7 +1212,7 @@ elseif ( LAYOUT == 3 ) then
 
 	local playerFrame = CreateAuraBarFrame( playerDataSource, oUF_Tukz_player );
 	playerFrame:SetHiddenHeight( -yOffset );
-	if ( playerClass == "DEATHKNIGHT" or playerClass == "SHAMAN" ) then
+	if ( playerClass == "DEATHKNIGHT" or playerClass == "SHAMAN" or playerClass == "PALADIN" or playerClass == "DRUID" or playerClass == "WARLOCK") then
 		playerFrame:SetPoint( "BOTTOMLEFT", oUF_Tukz_player, "TOPLEFT", 0, yOffset + 8 );
 		playerFrame:SetPoint( "BOTTOMRIGHT", oUF_Tukz_player, "TOPRIGHT", 0, yOffset + 8 );
 	else
@@ -1214,7 +1252,7 @@ elseif ( LAYOUT == 4 ) then
 
 	local playerFrame = CreateAuraBarFrame( playerDataSource, oUF_Tukz_player );
 	playerFrame:SetHiddenHeight( -yOffset );
-	if ( playerClass == "DEATHKNIGHT" or playerClass == "SHAMAN" ) then
+	if ( playerClass == "DEATHKNIGHT" or playerClass == "SHAMAN" or playerClass == "PALADIN" or playerClass == "DRUID" or playerClass == "WARLOCK") then
 		playerFrame:SetPoint( "BOTTOMLEFT", oUF_Tukz_player, "TOPLEFT", 0, yOffset + 8 );
 		playerFrame:SetPoint( "BOTTOMRIGHT", oUF_Tukz_player, "TOPRIGHT", 0, yOffset + 8 );
 	else
