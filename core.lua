@@ -252,7 +252,6 @@ target = {
 				CreateSpellEntry( 467 ), -- Thorns
 				CreateSpellEntry( 78675 ), -- Solar Beam
 				CreateSpellEntry( 93401 ), -- Sunfire
-				CreateSpellEntry( 80951 ), -- Pulverize
 			},
 			player = {
 				CreateSpellEntry( 48505 ), -- Starfall
@@ -273,7 +272,7 @@ target = {
 				CreateSpellEntry( 8936, false, nil, nil, 8936 ), -- Regrowth
 				CreateSpellEntry( 33763 ), -- Lifebloom
 				CreateSpellEntry( 467 ), -- Thorns
- 
+				CreateSpellEntry( 80951 ), -- Pulverize
 			},
 			procs = {
 				CreateSpellEntry( 16870 ), -- Clearcasting
@@ -291,25 +290,26 @@ target = {
 		HUNTER = { 
 			target = {
 				CreateSpellEntry( 49050 ), -- Aimed Shot
-				CreateSpellEntry( 49001 ), -- Serpent Sting
-				CreateSpellEntry( 52604 ), -- Scorpid Sting
-				CreateSpellEntry( 67993 ), -- Viper Sting
+				CreateSpellEntry( 1978 ), -- Serpent Sting
 				CreateSpellEntry( 53238 ), -- Piercing Shots
 				CreateSpellEntry( 63672 ), -- Black Arrow
 				CreateSpellEntry( 82654 ), -- Widow Venom
-				CreateSpellEntry( 34490 ), -- Silencing Shot, not the right ID place holder for now
+				CreateSpellEntry( 34490 ), -- Silencing Shot
 				CreateSpellEntry( 37506 ), -- Scatter Shot
 				CreateSpellEntry( 53243 ), -- Marker for death, need to be changed I think
+				CreateSpellEntry( 1130 ), -- Hunters mark
 			},
 			player = {
-				CreateSpellEntry( 34074 ), -- Aspect of the Viper
+				CreateSpellEntry( 82749 ), -- killing streak
+				CreateSpellEntry( 3045 ), -- Rapid Fire
+				CreateSpellEntry( 34471 ), --The beast within
 			},
 			procs = {
+				CreateSpellEntry( 53257 ), -- cobra strikes 
 				CreateSpellEntry( 6150 ), -- Quick Shots
 				CreateSpellEntry( 56453 ), -- Lock and Load
-				CreateSpellEntry( 83468 ), --Focus Fire
+				CreateSpellEntry( 82692 ), --Focus Fire
 				CreateSpellEntry( 35099 ), --Rapid Killing Rank 2
-				CreateSpellEntry( 34948 ), --Rapid Killing Rank 1
 				CreateSpellEntry( 53221 ), -- Improved Steadyshot Rank 1
 				CreateSpellEntry( 53222 ), -- Improved Steadyshot Rank 2
 				CreateSpellEntry( 53224 ), -- Improved Steadyshot Rank 3
@@ -331,6 +331,7 @@ target = {
 				CreateSpellEntry( 12654 ), -- Ignite
 				CreateSpellEntry( 22959 ), -- Critical Mass
 				CreateSpellEntry( 83853 ), -- Combustion
+				CreateSpellEntry( 31661 ), -- Dragon's Breath
 			},
 			player = {
 				CreateSpellEntry( 36032 ), -- Arcane Blast
