@@ -195,7 +195,7 @@ Examples:
 
 local CLASS_FILTERS = {
 		DEATHKNIGHT = { 
-target = {
+			target = {
 				CreateSpellEntry( 55095 ), -- Frost Fever
 				CreateSpellEntry( 55078 ), -- Blood Plague
 				CreateSpellEntry( 81130 ), -- Scarlet Fever
@@ -212,11 +212,14 @@ target = {
 				CreateSpellEntry( 77535 ), -- Blood Shield
 				CreateSpellEntry( 55233 ), -- Vampiric Blood
 				CreateSpellEntry( 81141 ), -- Blood Swarm
-				CreateSpellEntry( 70654 ), -- Blood Armor
 				CreateSpellEntry( 45529 ), -- Blood Tap
+				CreateSpellEntry( 49222 ), -- Bone sheild
+				CreateSpellEntry( 48792 ), -- Ice Bound Fortitude
+				CreateSpellEntry( 49028 ), -- Dancing Rune Weapon
 			},
 			procs = {
 				CreateSpellEntry( 53365 ), -- Unholy Strength
+				CreateSpellEntry( 64856 ), -- Blade barrier
 			}		},
 		DRUID = { 
 			target = { 
@@ -397,12 +400,14 @@ target = {
                 CreateSpellEntry( 10060 ), -- Power Infusion
                 CreateSpellEntry( 588 ), -- Inner Fire
                 CreateSpellEntry( 47585 ), -- Dispersion
+				CreateSpellEntry( 81700 ), -- Archangel
             },
             procs = {
                 CreateSpellEntry( 63733 ), -- Serendipity
                 CreateSpellEntry( 88690 ), -- Surge of Light
                 CreateSpellEntry( 77487 ), -- Shadow Orb
-                CreateSpellEntry( 71572 ), -- Cultivated Power --   
+                CreateSpellEntry( 71572 ), -- Cultivated Power
+				CreateSpellEntry( 81661 ), -- Evangelism
 			},
 		},
 		ROGUE = { 
