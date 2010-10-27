@@ -29,7 +29,7 @@ local BAR_SPACING = 1;
 	3 - player, target and trinket auras separated into three frames above player frame
 	4 - player and trinket auras are shown above player frame and target auras are shown above target frame
 ]]--
-local LAYOUT = 3;
+local LAYOUT = 4;
 
 -- Background alpha (range from 0 to 1)
 local BACKGROUND_ALPHA = 0.75;
@@ -220,11 +220,12 @@ local CLASS_FILTERS = {
 				CreateSpellEntry( 49222 ), -- Bone sheild
 				CreateSpellEntry( 48792 ), -- Ice Bound Fortitude
 				CreateSpellEntry( 49028 ), -- Dancing Rune Weapon
-				CreateSpellEntry( 70657 ), -- Advantage
+				CreateSpellEntry( 51271 ), -- Pillar of Frost
 			},
 			procs = {
 				CreateSpellEntry( 53365 ), -- Unholy Strength
 				CreateSpellEntry( 64856 ), -- Blade barrier
+				CreateSpellEntry( 70657 ), -- Advantage
 			}		},
 		DRUID = { 
 			target = { 
