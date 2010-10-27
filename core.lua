@@ -153,6 +153,10 @@ local TRINKET_FILTER = {
 		CreateSpellEntry( 26297 ), -- Berserking (troll racial)
 		CreateSpellEntry( 33702 ), CreateSpellEntry( 33697 ), CreateSpellEntry( 20572 ), -- Blood Fury (orc racial)
 		CreateSpellEntry( 57933 ), -- Tricks of Trade (15% dmg buff)
+
+		CreateSpellEntry( 67694 ), -- Defensive Tactics (Glyph of Indomitability)
+		CreateSpellEntry( 67699 ), CreateSpellEntry( 67753 ), -- Fortitude (Juggernaut's Vitality/Satrina's Impeding Scarab)
+		CreateSpellEntry( 71586 ), -- Hardened Skin (Corroded Skeleton Key)
 	};
 	
 --[[ Class specific filters
