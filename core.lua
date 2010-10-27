@@ -220,6 +220,7 @@ local CLASS_FILTERS = {
 				CreateSpellEntry( 49222 ), -- Bone sheild
 				CreateSpellEntry( 48792 ), -- Ice Bound Fortitude
 				CreateSpellEntry( 49028 ), -- Dancing Rune Weapon
+				CreateSpellEntry( 70657 ), -- Advantage
 			},
 			procs = {
 				CreateSpellEntry( 53365 ), -- Unholy Strength
