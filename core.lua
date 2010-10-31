@@ -295,7 +295,7 @@ local CLASS_FILTERS = {
 				CreateSpellEntry( 49050 ), -- Aimed Shot
 				CreateSpellEntry( 1978 ), -- Serpent Sting
 				CreateSpellEntry( 53238 ), -- Piercing Shots
-				CreateSpellEntry( 63672 ), -- Black Arrow
+				CreateSpellEntry( 3674 ), -- Black Arrow
 				CreateSpellEntry( 82654 ), -- Widow Venom
 				CreateSpellEntry( 34490 ), -- Silencing Shot
 				CreateSpellEntry( 37506 ), -- Scatter Shot
@@ -313,9 +313,7 @@ local CLASS_FILTERS = {
 				CreateSpellEntry( 56453 ), -- Lock and Load
 				CreateSpellEntry( 82692 ), --Focus Fire
 				CreateSpellEntry( 35099 ), --Rapid Killing Rank 2
-				CreateSpellEntry( 53221 ), -- Improved Steadyshot Rank 1
-				CreateSpellEntry( 53222 ), -- Improved Steadyshot Rank 2
-				CreateSpellEntry( 53224 ), -- Improved Steadyshot Rank 3
+				CreateSpellEntry( 53220 ), -- Improved Steadyshot
 				CreateSpellEntry( 70728 ), -- Exploit Weakness (2pc t10)
 				CreateSpellEntry( 71007 ), -- Stinger (4pc t10)
 			},
@@ -335,6 +333,8 @@ local CLASS_FILTERS = {
 				CreateSpellEntry( 22959 ), -- Critical Mass
 				CreateSpellEntry( 83853 ), -- Combustion
 				CreateSpellEntry( 31661 ), -- Dragon's Breath
+				CreateSpellEntry( 83154 ), -- Piercing Chill
+				CreateSpellEntry( 44572 ), -- Deep Freeze
 			},
 			player = {
 				CreateSpellEntry( 36032 ), -- Arcane Blast
@@ -346,13 +346,15 @@ local CLASS_FILTERS = {
 				CreateSpellEntry( 45438 ), -- Ice Block
 				CreateSpellEntry( 12472 ), -- Icy Veins
 				CreateSpellEntry( 130 ), -- Slow Fall
+				CreateSpellEntry( 57761 ), -- Brain Freeze
 			},
 			procs = {
-				CreateSpellEntry( 83074 ), -- Fingers of Frost
+				CreateSpellEntry( 44544 ), -- Fingers of Frost
 				CreateSpellEntry( 79683 ), -- Arcane Missiles!
 				CreateSpellEntry( 48108 ), -- Hot Streak
 				CreateSpellEntry( 64343 ), -- Impact
 				CreateSpellEntry( 70753 ), -- Pushing the Limit (2pc t10)
+				CreateSpellEntry( 70747 ), -- Quad Core (4pc t10)
 			},
 		},
 		PALADIN = { 
@@ -364,6 +366,7 @@ local CLASS_FILTERS = {
                 CreateSpellEntry( 20170 ), -- Seal of Justice --
                 CreateSpellEntry( 26017 ), -- Vindication --
                 CreateSpellEntry( 68055 ), -- Judgements of the Just --
+				CreateSpellEntry( 86273 ), -- Illuminated Healing
             },
             player = {
                 CreateSpellEntry( 642 ), -- Divine Shield
@@ -375,12 +378,22 @@ local CLASS_FILTERS = {
                 CreateSpellEntry( 1044 ), -- Hand of Freedom
                 CreateSpellEntry( 1022 ), -- Hand of Protection
                 CreateSpellEntry( 1038 ), -- Hand of Salvation
- 
+				CreateSpellEntry( 20053 ), -- Conviction
+				CreateSpellEntry( 85496 ), -- Speed of Light
+				CreateSpellEntry( 53657 ), -- Judgements of the Pure
+				CreateSpellEntry( 54149 ), -- Infusion of Light
+				CreateSpellEntry( 88821 ), -- Daybreak
+				CreateSpellEntry( 53563 ), -- Beacon of Light
+				CreateSpellEntry( 31821 ), -- Aura Mastery
+				CreateSpellEntry( 54428 ), -- Divine Plea
+				CreateSpellEntry( 31482 ), -- Divine Favor
+				CreateSpellEntry( 6940 ), -- Hand of Sacrifice
             },
             procs = {
                 CreateSpellEntry( 59578 ), -- The Art of War
                 CreateSpellEntry( 90174 ), -- Hand of Light
-                CreateSpellEntry( 71396 ), -- Rage of the Fallen			
+                CreateSpellEntry( 71396 ), -- Rage of the Fallen		
+				CreateSpellEntry( 88821 ), -- Daybreak
 			},
 		},
 		PRIEST = { 
@@ -395,12 +408,18 @@ local CLASS_FILTERS = {
                 CreateSpellEntry( 589 ), -- Shadow Word: Pain
                 CreateSpellEntry( 2944 ), -- Devouring Plague
                 CreateSpellEntry( 48153 ), -- Guardian Spirit
+				CreateSpellEntry( 77485 ), -- Echo of Light
             },
             player = {
                 CreateSpellEntry( 10060 ), -- Power Infusion
                 CreateSpellEntry( 588 ), -- Inner Fire
                 CreateSpellEntry( 47585 ), -- Dispersion
 				CreateSpellEntry( 81700 ), -- Archangel
+				CreateSpellEntry( 14751 ), -- Chakra
+				CreateSpellEntry( 81208 ), -- Chakra Heal
+				CreateSpellEntry( 81207 ), -- Chakra Renew
+				CreateSpellEntry( 81209 ), -- Chakra Smite
+				CreateSpellEntry( 81206 ), -- Prayer of Healing
             },
             procs = {
                 CreateSpellEntry( 63733 ), -- Serendipity
@@ -408,6 +427,8 @@ local CLASS_FILTERS = {
                 CreateSpellEntry( 77487 ), -- Shadow Orb
                 CreateSpellEntry( 71572 ), -- Cultivated Power
 				CreateSpellEntry( 81661 ), -- Evangelism
+				CreateSpellEntry( 72418 ), -- Kuhlendes Wissen
+				CreateSpellEntry( 71584 ), -- Revitalize
 			},
 		},
 		ROGUE = { 
