@@ -385,7 +385,6 @@ local CLASS_FILTERS = {
         CreateSpellEntry( 1022 ), -- Hand of Protection
         CreateSpellEntry( 1038 ), -- Hand of Salvation
         CreateSpellEntry( 20053 ), -- Conviction
-        CreateSpellEntry( 85496 ), -- Speed of Light
         CreateSpellEntry( 53657 ), -- Judgements of the Pure
         CreateSpellEntry( 54149 ), -- Infusion of Light
         CreateSpellEntry( 88821 ), -- Daybreak
@@ -397,9 +396,10 @@ local CLASS_FILTERS = {
       },
       procs = {
         CreateSpellEntry( 59578 ), -- The Art of War
-        CreateSpellEntry( 90174 ), -- Hand of Light
         CreateSpellEntry( 71396 ), -- Rage of the Fallen
+        CreateSpellEntry( 85496 ), -- Speed of Light
         CreateSpellEntry( 88821 ), -- Daybreak
+        CreateSpellEntry( 90174 ), -- Hand of Light
       },
     },
     PRIEST = {
