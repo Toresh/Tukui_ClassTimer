@@ -387,7 +387,7 @@ local CLASS_FILTERS = {
         CreateSpellEntry( 20053 ), -- Conviction
         CreateSpellEntry( 53657 ), -- Judgements of the Pure
         CreateSpellEntry( 54149 ), -- Infusion of Light
-        CreateSpellEntry( 88821 ), -- Daybreak
+        CreateSpellEntry( 88819 ), -- Daybreak
         CreateSpellEntry( 53563 ), -- Beacon of Light
         CreateSpellEntry( 31821 ), -- Aura Mastery
         CreateSpellEntry( 54428 ), -- Divine Plea
