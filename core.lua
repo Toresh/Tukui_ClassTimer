@@ -143,6 +143,8 @@ local TRINKET_FILTER = {
 		CreateSpellEntry( 71401 ), CreateSpellEntry( 71541 ), -- Icy Rage (Whispering Fanged Skull)
 		CreateSpellEntry( 71396 ), -- Herkuml War Token
 		CreateSpellEntry( 72412 ), -- Frostforged Champion (Ashen Band of Unmatched/Endless Might/Vengeance)
+		CreateSpellEntry( 72414 ), -- Frostforged Defender (Ashen Band of Courage)
+		CreateSpellEntry( 72416 ), -- Frostforged Sage (Ashen Band of Destruction/Wisdom)
 	
 		CreateSpellEntry( 59626 ), -- Black Magic
 		CreateSpellEntry( 54758 ), -- Hyperspeed Acceleration (Hyperspeed Accelerators)
@@ -150,9 +152,14 @@ local TRINKET_FILTER = {
 		CreateSpellEntry( 59620 ), -- Berserking
 		
 		CreateSpellEntry( 2825, true ), CreateSpellEntry( 32182, true ), -- Bloodlust/Heroism
+		CreateSpellEntry( 90355, true ), -- Ancient Hysteria, bloodlust from hunters pet
 		CreateSpellEntry( 26297 ), -- Berserking (troll racial)
 		CreateSpellEntry( 33702 ), CreateSpellEntry( 33697 ), CreateSpellEntry( 20572 ), -- Blood Fury (orc racial)
 		CreateSpellEntry( 57933 ), -- Tricks of Trade (15% dmg buff)
+		
+		CreateSpellEntry( 67694 ), -- Defensive Tactics (Glyph of Indomitability)
+		CreateSpellEntry( 67699 ), CreateSpellEntry( 67753 ), -- Fortitude (Juggernaut's Vitality/Satrina's Impeding Scarab)
+		CreateSpellEntry( 71586 ), -- Hardened Skin (Corroded Skeleton Key)
 	};
 	
 --[[ Class specific filters
@@ -216,10 +223,12 @@ local CLASS_FILTERS = {
 				CreateSpellEntry( 49222 ), -- Bone sheild
 				CreateSpellEntry( 48792 ), -- Ice Bound Fortitude
 				CreateSpellEntry( 49028 ), -- Dancing Rune Weapon
+				CreateSpellEntry( 51271 ), -- Pillar of Frost
 			},
 			procs = {
 				CreateSpellEntry( 53365 ), -- Unholy Strength
 				CreateSpellEntry( 64856 ), -- Blade barrier
+				CreateSpellEntry( 70657 ), -- Advantage
 			}		},
 		DRUID = { 
 			target = { 
