@@ -394,7 +394,7 @@ local CLASS_FILTERS = {
         CreateSpellEntry( 59578 ), -- The Art of War
         CreateSpellEntry( 90174 ), -- Hand of Light
         CreateSpellEntry( 71396 ), -- Rage of the Fallen
-        CreateSpellEntry( 54149 ), -- Infusion of Light
+        CreateSpellEntry( 53672 ), CreateSpellEntry( 54149 ), -- Infusion of Light (Rank1/Rank2)
         CreateSpellEntry( 85496 ), -- Speed of Light
         CreateSpellEntry( 88820 ), CreateSpellEntry( 88821 ), -- Daybreak (Rank1/Rank2)
       },
