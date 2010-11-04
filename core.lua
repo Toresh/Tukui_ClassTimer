@@ -388,10 +388,7 @@ local CLASS_FILTERS = {
                 CreateSpellEntry( 1022 ), -- Hand of Protection
                 CreateSpellEntry( 1038 ), -- Hand of Salvation
 				CreateSpellEntry( 20053 ), -- Conviction
-				CreateSpellEntry( 85496 ), -- Speed of Light
 				CreateSpellEntry( 53657 ), -- Judgements of the Pure
-				CreateSpellEntry( 54149 ), -- Infusion of Light
-				CreateSpellEntry( 88821 ), -- Daybreak
 				CreateSpellEntry( 53563 ), -- Beacon of Light
 				CreateSpellEntry( 31821 ), -- Aura Mastery
 				CreateSpellEntry( 54428 ), -- Divine Plea
@@ -402,7 +399,9 @@ local CLASS_FILTERS = {
                 CreateSpellEntry( 59578 ), -- The Art of War
                 CreateSpellEntry( 90174 ), -- Hand of Light
                 CreateSpellEntry( 71396 ), -- Rage of the Fallen		
-				CreateSpellEntry( 88821 ), -- Daybreak
+				CreateSpellEntry( 53672 ), CreateSpellEntry( 54149 ), -- Infusion of Light (Rank1/Rank2)
+				CreateSpellEntry( 85496 ), -- Speed of Light
+				CreateSpellEntry( 88820 ), CreateSpellEntry( 88821 ), -- Daybreak (Rank1/Rank2)
 			},
 		},
 		PRIEST = { 
