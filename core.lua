@@ -401,7 +401,8 @@ local CLASS_FILTERS = {
                 CreateSpellEntry( 71396 ), -- Rage of the Fallen		
 				CreateSpellEntry( 53672 ), CreateSpellEntry( 54149 ), -- Infusion of Light (Rank1/Rank2)
 				CreateSpellEntry( 85496 ), -- Speed of Light
-				CreateSpellEntry( 88820 ), CreateSpellEntry( 88821 ), -- Daybreak (Rank1/Rank2)
+				CreateSpellEntry( 88819 ), -- Daybreak
+				CreateSpellEntry( 20050 ), CreateSpellEntry( 20052 ), CreateSpellEntry( 20053 ), -- Conviction (Rank1/Rank2/Rank3)
 			},
 		},
 		PRIEST = { 
