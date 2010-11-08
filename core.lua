@@ -387,7 +387,6 @@ local CLASS_FILTERS = {
                 CreateSpellEntry( 1044 ), -- Hand of Freedom
                 CreateSpellEntry( 1022 ), -- Hand of Protection
                 CreateSpellEntry( 1038 ), -- Hand of Salvation
-				CreateSpellEntry( 20053 ), -- Conviction
 				CreateSpellEntry( 53657 ), -- Judgements of the Pure
 				CreateSpellEntry( 53563 ), -- Beacon of Light
 				CreateSpellEntry( 31821 ), -- Aura Mastery
