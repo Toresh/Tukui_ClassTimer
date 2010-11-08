@@ -160,6 +160,9 @@ local TRINKET_FILTER = {
 		CreateSpellEntry( 67694 ), -- Defensive Tactics (Glyph of Indomitability)
 		CreateSpellEntry( 67699 ), CreateSpellEntry( 67753 ), -- Fortitude (Juggernaut's Vitality/Satrina's Impeding Scarab)
 		CreateSpellEntry( 71586 ), -- Hardened Skin (Corroded Skeleton Key)
+
+    CreateSpellEntry( 71602 ), CreateSpellEntry( 71645 ), -- Surge of Power (Dislodged Foreign Object)
+    CreateSpellEntry( 75465 ), CreateSpellEntry( 75474 ), -- Twilight Flames (Charred Twilight Scale)
 	};
 	
 --[[ Class specific filters
