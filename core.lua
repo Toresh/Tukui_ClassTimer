@@ -232,6 +232,7 @@ local CLASS_FILTERS = {
 				CreateSpellEntry( 53365 ), -- Unholy Strength
 				CreateSpellEntry( 64856 ), -- Blade barrier
 				CreateSpellEntry( 70657 ), -- Advantage
+				CreateSpellEntry( 81340 ), -- Sudden Doom
 			}		},
 		DRUID = { 
 			target = { 
