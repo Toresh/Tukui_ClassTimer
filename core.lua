@@ -160,6 +160,9 @@ local TRINKET_FILTER = {
 		CreateSpellEntry( 67694 ), -- Defensive Tactics (Glyph of Indomitability)
 		CreateSpellEntry( 67699 ), CreateSpellEntry( 67753 ), -- Fortitude (Juggernaut's Vitality/Satrina's Impeding Scarab)
 		CreateSpellEntry( 71586 ), -- Hardened Skin (Corroded Skeleton Key)
+		
+		CreateSpellEntry( 75465 ), CreateSpellEntry( 75474 ), -- Twilight Flames (Charred Twilight Scale)
+		CreateSpellEntry( 71602 ), CreateSpellEntry( 71645 ), -- Surge of Power (Dislodged Foreign Object)
 	};
 	
 --[[ Class specific filters
@@ -387,7 +390,6 @@ local CLASS_FILTERS = {
                 CreateSpellEntry( 1044 ), -- Hand of Freedom
                 CreateSpellEntry( 1022 ), -- Hand of Protection
                 CreateSpellEntry( 1038 ), -- Hand of Salvation
-				CreateSpellEntry( 20053 ), -- Conviction
 				CreateSpellEntry( 53657 ), -- Judgements of the Pure
 				CreateSpellEntry( 53563 ), -- Beacon of Light
 				CreateSpellEntry( 31821 ), -- Aura Mastery
@@ -401,7 +403,8 @@ local CLASS_FILTERS = {
                 CreateSpellEntry( 71396 ), -- Rage of the Fallen		
 				CreateSpellEntry( 53672 ), CreateSpellEntry( 54149 ), -- Infusion of Light (Rank1/Rank2)
 				CreateSpellEntry( 85496 ), -- Speed of Light
-				CreateSpellEntry( 88820 ), CreateSpellEntry( 88821 ), -- Daybreak (Rank1/Rank2)
+				CreateSpellEntry( 88819 ), -- Daybreak
+				CreateSpellEntry( 20050 ), CreateSpellEntry( 20052 ), CreateSpellEntry( 20053 ), -- Conviction (Rank1/Rank2/Rank3)
 			},
 		},
 		PRIEST = { 
