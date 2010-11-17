@@ -227,6 +227,7 @@ local CLASS_FILTERS = {
 				CreateSpellEntry( 48792 ), -- Ice Bound Fortitude
 				CreateSpellEntry( 49028 ), -- Dancing Rune Weapon
 				CreateSpellEntry( 51271 ), -- Pillar of Frost
+				CreateSpellEntry( 48707 ), -- Anti-Magic Shell
 			},
 			procs = {
 				CreateSpellEntry( 53365 ), -- Unholy Strength
@@ -420,7 +421,7 @@ local CLASS_FILTERS = {
                 CreateSpellEntry( 589 ), -- Shadow Word: Pain
                 CreateSpellEntry( 2944 ), -- Devouring Plague
                 CreateSpellEntry( 48153 ), -- Guardian Spirit
-				CreateSpellEntry( 77485 ), -- Echo of Light
+				CreateSpellEntry( 77489 ), -- Echo of Light
             },
             player = {
                 CreateSpellEntry( 10060 ), -- Power Infusion
@@ -434,7 +435,7 @@ local CLASS_FILTERS = {
 				CreateSpellEntry( 81206 ), -- Prayer of Healing
             },
             procs = {
-                CreateSpellEntry( 63733 ), -- Serendipity
+                CreateSpellEntry( 63735 ), -- Serendipity
                 CreateSpellEntry( 88690 ), -- Surge of Light
                 CreateSpellEntry( 77487 ), -- Shadow Orb
                 CreateSpellEntry( 71572 ), -- Cultivated Power
@@ -532,6 +533,7 @@ local CLASS_FILTERS = {
 				CreateSpellEntry( 1160 ), -- Demoralizing Shout
 				CreateSpellEntry( 64382 ), -- Shattering Throw
 				CreateSpellEntry( 7386 ), -- Sunder Armor
+				CreateSpellEntry( 86346 ), -- Colossus Smash
 				CreateSpellEntry( 7922 ), -- Charge (stun)
 				CreateSpellEntry( 1715 ), -- Hamstring
 				CreateSpellEntry( 50725 ), -- Vigilance
@@ -540,7 +542,6 @@ local CLASS_FILTERS = {
 				CreateSpellEntry( 18498 ), -- Gag Order
 				CreateSpellEntry( 12809 ), -- Concussion Blow
 				CreateSpellEntry( 6343 ), -- Thunderclap
- 
 			},
 			player = {
 				CreateSpellEntry( 469 ), -- Commanding Shout
@@ -552,6 +553,9 @@ local CLASS_FILTERS = {
 				CreateSpellEntry( 20230 ), -- Retaliation
 				CreateSpellEntry( 2565 ), -- Shield Block
                 CreateSpellEntry( 12975 ), -- Last Stand
+				CreateSpellEntry( 90806 ), -- Executioner
+				CreateSpellEntry( 85738 ), CreateSpellEntry( 85739 ), -- Meat Cleaver Rank 1 and 2
+				CreateSpellEntry( 86662 ), CreateSpellEntry( 86663 ), -- Rude interruption rank 1 and 2
 			},
 			procs = {
 				
