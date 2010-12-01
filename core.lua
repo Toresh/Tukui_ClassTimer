@@ -367,6 +367,7 @@ local CLASS_FILTERS = {
 				CreateSpellEntry( 79683 ), -- Arcane Missiles!
 				CreateSpellEntry( 48108 ), -- Hot Streak
 				CreateSpellEntry( 64343 ), -- Impact
+				CreateSpellEntry( 83582 ), -- Pyromaniac
 				CreateSpellEntry( 70753 ), -- Pushing the Limit (2pc t10)
 				CreateSpellEntry( 70747 ), -- Quad Core (4pc t10)
 			},
@@ -442,6 +443,8 @@ local CLASS_FILTERS = {
 				CreateSpellEntry( 81661 ), -- Evangelism
 				CreateSpellEntry( 72418 ), -- Kuhlendes Wissen
 				CreateSpellEntry( 71584 ), -- Revitalize
+				CreateSpellEntry( 59888 ), -- Borrowed Time
+				CreateSpellEntry( 95799 ), -- Empowered Shadow
 			},
 		},
 		ROGUE = { 
@@ -513,6 +516,9 @@ local CLASS_FILTERS = {
 				CreateSpellEntry( 17962 ), -- Conflagration
 				CreateSpellEntry( 348, false, nil, nil, 348 ), -- Immolate
 				CreateSpellEntry( 27243, false, nil, nil, 27243 ), -- Seed of Corruption
+				CreateSpellEntry( 17941 ), -- Shadow trance
+				CreateSpellEntry( 64371 ), -- Eradication
+				CreateSpellEntry( 85383 ), --Imp Soul Fire
 			},
 				player = {            
 				CreateSpellEntry( 17941 ), -- Shadow trance 
@@ -528,11 +534,11 @@ local CLASS_FILTERS = {
 		},
 		WARRIOR = { 
 			target = {
-				CreateSpellEntry( 772 ), -- Rend
+				CreateSpellEntry( 94009 ), -- Rend
 				CreateSpellEntry( 12294 ), -- Mortal Strike
 				CreateSpellEntry( 1160 ), -- Demoralizing Shout
 				CreateSpellEntry( 64382 ), -- Shattering Throw
-				CreateSpellEntry( 7386 ), -- Sunder Armor
+				CreateSpellEntry( 58567 ), -- Sunder Armor
 				CreateSpellEntry( 86346 ), -- Colossus Smash
 				CreateSpellEntry( 7922 ), -- Charge (stun)
 				CreateSpellEntry( 1715 ), -- Hamstring
@@ -542,6 +548,7 @@ local CLASS_FILTERS = {
 				CreateSpellEntry( 18498 ), -- Gag Order
 				CreateSpellEntry( 12809 ), -- Concussion Blow
 				CreateSpellEntry( 6343 ), -- Thunderclap
+				CreateSpellEntry( 12162 ), CreateSpellEntry( 12850 ), CreateSpellEntry( 12868 ), -- Deep Wounds Rank 1, 2 & 3
 			},
 			player = {
 				CreateSpellEntry( 469 ), -- Commanding Shout
@@ -554,11 +561,15 @@ local CLASS_FILTERS = {
 				CreateSpellEntry( 2565 ), -- Shield Block
                 CreateSpellEntry( 12975 ), -- Last Stand
 				CreateSpellEntry( 90806 ), -- Executioner
+				CreateSpellEntry( 32216 ), -- Victorious (Victory Rush enabled)
+				CreateSpellEntry( 12292 ), -- Death Wish
 				CreateSpellEntry( 85738 ), CreateSpellEntry( 85739 ), -- Meat Cleaver Rank 1 and 2
 				CreateSpellEntry( 86662 ), CreateSpellEntry( 86663 ), -- Rude interruption rank 1 and 2
 			},
 			procs = {
-				
+				CreateSpellEntry( 46916 ), -- Bloodsurge Slam (Free & Instant)
+				CreateSpellEntry( 12964 ), -- Battle Trance (Free Special)
+				CreateSpellEntry( 86627 ), -- Incite (Auto-crit HStrike)
 			},
 		},
 	};
