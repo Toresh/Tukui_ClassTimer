@@ -162,7 +162,7 @@ local TRINKET_FILTER = {
 		CreateSpellEntry( 71586 ), -- Hardened Skin (Corroded Skeleton Key)
 		
 		CreateSpellEntry( 75465 ), CreateSpellEntry( 75474 ), -- Twilight Flames (Charred Twilight Scale)
-		CreateSpellEntry( 71602 ), CreateSpellEntry( 71645 ), -- Surge of Power (Dislodged Foreign Object)
+		CreateSpellEntry( 71602 ), CreateSpellEntry( 71644 ), -- Surge of Power (Dislodged Foreign Object)
 	};
 	
 --[[ Class specific filters
@@ -268,7 +268,7 @@ local CLASS_FILTERS = {
 				CreateSpellEntry( 770, true ), -- Farie Fire
 				CreateSpellEntry( 467 ), -- Thorns
 				CreateSpellEntry( 78675 ), -- Solar Beam
-				CreateSpellEntry( 93401 ), -- Sunfire
+				CreateSpellEntry( 93402 ), -- Sunfire
 			},
 			player = {
 				CreateSpellEntry( 48505 ), -- Starfall
@@ -518,7 +518,9 @@ local CLASS_FILTERS = {
 				CreateSpellEntry( 27243, false, nil, nil, 27243 ), -- Seed of Corruption
 				CreateSpellEntry( 17941 ), -- Shadow trance
 				CreateSpellEntry( 64371 ), -- Eradication
-				CreateSpellEntry( 85383 ), --Imp Soul Fire
+				CreateSpellEntry( 85383 ), -- Imp Soul Fire
+				CreateSpellEntry( 1741 ), -- Curse of Tongue
+				CreateSpellEntry( 18223 ), -- Curse of Exhaustion
 			},
 				player = {            
 				CreateSpellEntry( 17941 ), -- Shadow trance 
@@ -526,7 +528,7 @@ local CLASS_FILTERS = {
 			},
 			procs = {
 				CreateSpellEntry( 86121 ), -- Soul Swap
-				CreateSpellEntry( 54276 ), -- Backdraft
+				CreateSpellEntry( 54274 ), CreateSpellEntry( 54276 ), CreateSpellEntry( 54277 ), -- Backdraft rank 1/2/3
 				CreateSpellEntry( 71165 ), -- Molten Cor
 				CreateSpellEntry( 63167 ), -- Decimation
 				           
