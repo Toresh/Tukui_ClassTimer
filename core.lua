@@ -316,13 +316,14 @@ local CLASS_FILTERS = {
 				CreateSpellEntry( 82654 ), -- Widow Venom
 				CreateSpellEntry( 34490 ), -- Silencing Shot
 				CreateSpellEntry( 37506 ), -- Scatter Shot
-				CreateSpellEntry( 53243 ), -- Marker for death, need to be changed I think
+				CreateSpellEntry( 88691 ), -- Marker for death
 				CreateSpellEntry( 1130 ), -- Hunters mark
 			},
 			player = {
 				CreateSpellEntry( 82749 ), -- killing streak
 				CreateSpellEntry( 3045 ), -- Rapid Fire
 				CreateSpellEntry( 34471 ), --The beast within
+				CreateSpellEntry( 53434 ), --call of the wild
 			},
 			procs = {
 				CreateSpellEntry( 53257 ), -- cobra strikes 
@@ -331,6 +332,11 @@ local CLASS_FILTERS = {
 				CreateSpellEntry( 82692 ), --Focus Fire
 				CreateSpellEntry( 35099 ), --Rapid Killing Rank 2
 				CreateSpellEntry( 53220 ), -- Improved Steadyshot
+				CreateSpellEntry( 89388 ), -- sic'em
+				CreateSpellEntry( 94007 ), -- Killing Streak
+				CreateSpellEntry( 70893 ), -- Culling the herd
+				CreateSpellEntry( 82925 ), --Ready, Set, Aim
+				CreateSpellEntry( 82926 ), --Fire
 			},
 		},
 		MAGE = {
@@ -400,6 +406,7 @@ local CLASS_FILTERS = {
 				CreateSpellEntry( 54428 ), -- Divine Plea
 				CreateSpellEntry( 31482 ), -- Divine Favor
 				CreateSpellEntry( 6940 ), -- Hand of Sacrifice
+				CreateSpellEntry( 84963 ), -- Inquisition
             },
             procs = {
                 CreateSpellEntry( 59578 ), -- The Art of War
@@ -491,6 +498,7 @@ local CLASS_FILTERS = {
 				CreateSpellEntry( 61295 ), -- Riptide
 				CreateSpellEntry( 51945 ), -- Earthliving
 				CreateSpellEntry( 77657 ), -- Searing Flames
+				CreateSpellEntry( 64701 ), -- Elemental Mastery
 			},
 				player = {
 				CreateSpellEntry( 324 ), -- Lightning Shield
@@ -502,7 +510,8 @@ local CLASS_FILTERS = {
  
 			},
 			procs = {
-				CreateSpellEntry( 53817 ), -- Maelstrom Weapon			
+				CreateSpellEntry( 53817 ), -- Maelstrom Weapon
+				CreateSpellEntry( 16246 ), -- Clearcasting				
 			},
 		},
 		WARLOCK = { 
