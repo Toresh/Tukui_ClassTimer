@@ -120,7 +120,7 @@ local TENTHS_TRESHOLD = 1
 -- Trinket filter - mostly for trinket procs, delete or wrap into comment block --[[  ]] if you dont want to track those
 local TRINKET_FILTER = {
 		
-		CreateSpellEntry( 2825, true ), CreateSpellEntry( 32182, true ), CreateSpellEntry( 80353, true) -- Bloodlust/Heroism/Timewarp
+		CreateSpellEntry( 2825, true ), CreateSpellEntry( 32182, true ), CreateSpellEntry( 80353, true), -- Bloodlust/Heroism/Timewarp
 		CreateSpellEntry( 90355, true ), -- Ancient Hysteria, bloodlust from hunters pet
 		CreateSpellEntry( 26297 ), -- Berserking (troll racial)
 		CreateSpellEntry( 33702 ), CreateSpellEntry( 33697 ), CreateSpellEntry( 20572 ), -- Blood Fury (orc racial)
