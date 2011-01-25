@@ -558,8 +558,9 @@ local CLASS_FILTERS = {
 				CreateSpellEntry( 17941 ), -- Shadow trance
 				CreateSpellEntry( 64371 ), -- Eradication
 				CreateSpellEntry( 85383, false, nil, nil, 6353 ), -- Imp Soul Fire
-				CreateSpellEntry( 1741 ), -- Curse of Tongue
+				CreateSpellEntry( 1714 ), -- Curse of Tongue
 				CreateSpellEntry( 18223 ), -- Curse of Exhaustion
+				CreateSpellEntry( 702 ), -- Curse of Weakness
 			},
 				player = {            
 				CreateSpellEntry( 17941 ), -- Shadow trance 
