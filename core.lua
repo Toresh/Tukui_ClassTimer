@@ -126,15 +126,39 @@ local TRINKET_FILTER = {
 		CreateSpellEntry( 33702 ), CreateSpellEntry( 33697 ), CreateSpellEntry( 20572 ), -- Blood Fury (orc racial)
 		CreateSpellEntry( 57933 ), -- Tricks of Trade (15% dmg buff)
 		
+		-- Racials
+		CreateSpellEntry( 20954 ), -- Stoneform (Dwarf)
+		CreateSpellEntry( 59752 ), -- Every Man for Himself (Human)
+		CreateSpellEntry( 57901 ), -- Gift of the Naaru (Draenei)
+		CreateSpellEntry( 68992 ), -- Darkflight (Worgen)
+		CreateSpellEntry( 7744 ), -- Will of the Forsaken (Undead)
+		CreateSpellEntry( 20577 ), -- Cannibalize (Undead)
+		CreateSpellEntry( 26297 ), -- Berserking (Troll)
+		CreateSpellEntry( 20572 ), -- Blood Fury for Attack Power (Orc)
+		CreateSpellEntry( 33702 ), -- Blood Fury for Spell Power (Orc)
+		CreateSpellEntry( 33697 ), -- Blood Fury for Both (Orc)
+		
+		--Darkmoon Cards
+		CreateSpellEntry( 89181 ), -- Earthquake
+		CreateSpellEntry( 89182 ), -- Tsunami
+		CreateSpellEntry( 89091 ), -- Volcano
+		
 		-- Blackwing Descent
-		CreateSpellEntry( 91320 ), -- Jar of Ancient Remedies
+		CreateSpellEntry( 91322 ), -- Jar of Ancient Remedies Normal
+		CreateSpellEntry( 92331 ), -- Jar of Ancient Remedies Heroic
 		CreateSpellEntry( 91007 ), -- Bell of Enraging Reasonance
 		CreateSpellEntry( 91816 ), -- Heart of Rage
+		CreateSpellEntry( 92235 ), -- Symbiotic Worm
 		
 		--The Bastion of Twilight
-		CreateSpellEntry( 92126 ), -- Essence of the Cyclone
+		CreateSpellEntry( 92126 ), -- Essence of the Cyclone Normal
+		CreateSpellEntry( 92351 ), -- Essence of the Cyclone Heroic
+		CreateSpellEntry( 91184 ), -- Fall of mortality
 		CreateSpellEntry( 92213 ), -- Vial of Stolen Memories
 		CreateSpellEntry( 91024 ), -- Theralion's Mirror
+		CreateSpellEntry( 91821 ), -- Crushing Weight
+		CreateSpellEntry( 91027 ), -- Heart of Ignacious Stacks
+		CreateSpellEntry( 91041 ), -- Heart of Ignacious on use
 		
 		--Throne of the Four Winds
 		
@@ -370,6 +394,7 @@ local CLASS_FILTERS = {
 				CreateSpellEntry( 12472 ), -- Icy Veins
 				CreateSpellEntry( 130 ), -- Slow Fall
 				CreateSpellEntry( 57761 ), -- Brain Freeze
+				CreateSpellEntry( 12536 ), -- Clearcasting
 			},
 			procs = {
 				CreateSpellEntry( 44544 ), -- Fingers of Frost
@@ -472,6 +497,9 @@ local CLASS_FILTERS = {
                 CreateSpellEntry( 703 ), -- Garrote
                 CreateSpellEntry( 79140 ), -- vendetta
                 CreateSpellEntry( 16511 ), -- Hemorrhage
+				CreateSpellEntry( 84745 ), -- Shallow Insight
+				CreateSpellEntry( 84746 ), -- Moderate Insight
+				CreateSpellEntry( 84747 ), -- Deep Insight
             },
             player = {
                 CreateSpellEntry( 32645 ), -- Envenom
@@ -484,6 +512,7 @@ local CLASS_FILTERS = {
                 CreateSpellEntry( 5171 ), -- Slice and Dice
                 CreateSpellEntry( 55503 ), -- Lifeblood
 				CreateSpellEntry( 13877 ), -- Blade Flurry
+				CreateSpellEntry( 74001 ), -- Combat Readiness
             },
             procs = {
                 CreateSpellEntry( 71396 ), -- Rage of the Fallen
@@ -528,7 +557,7 @@ local CLASS_FILTERS = {
 				CreateSpellEntry( 27243, false, nil, nil, 27243 ), -- Seed of Corruption
 				CreateSpellEntry( 17941 ), -- Shadow trance
 				CreateSpellEntry( 64371 ), -- Eradication
-				CreateSpellEntry( 85383 ), -- Imp Soul Fire
+				CreateSpellEntry( 85383, false, nil, nil, 6353 ), -- Imp Soul Fire
 				CreateSpellEntry( 1741 ), -- Curse of Tongue
 				CreateSpellEntry( 18223 ), -- Curse of Exhaustion
 			},
@@ -541,7 +570,7 @@ local CLASS_FILTERS = {
 				CreateSpellEntry( 54274 ), CreateSpellEntry( 54276 ), CreateSpellEntry( 54277 ), -- Backdraft rank 1/2/3
 				CreateSpellEntry( 71165 ), -- Molten Cor
 				CreateSpellEntry( 63167 ), -- Decimation
-				           
+				CreateSpellEntry( 47283 ), -- Empowered Imp         
 			},
 		},
 		WARRIOR = { 
@@ -571,7 +600,7 @@ local CLASS_FILTERS = {
 				CreateSpellEntry( 1719 ), -- Recklessness
 				CreateSpellEntry( 20230 ), -- Retaliation
 				CreateSpellEntry( 2565 ), -- Shield Block
-                CreateSpellEntry( 12975 ), -- Last Stand
+                CreateSpellEntry( 12976 ), -- Last Stand
 				CreateSpellEntry( 90806 ), -- Executioner
 				CreateSpellEntry( 32216 ), -- Victorious (Victory Rush enabled)
 				CreateSpellEntry( 12292 ), -- Death Wish
