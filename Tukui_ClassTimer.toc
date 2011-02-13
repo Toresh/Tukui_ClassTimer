@@ -1,7 +1,7 @@
 ## Interface: 40000
 ## Title: |cffC495DDTukui Class Timer|r
 ## Author: Kryso
-## Version: 2.18
+## Version: 3.02
 ## RequiredDeps: Tukui
 
 core.lua

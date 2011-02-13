@@ -325,11 +325,7 @@ local CLASS_FILTERS = {
 				CreateSpellEntry( 93400 ), -- Shooting Stars
 				CreateSpellEntry( 81006 ), CreateSpellEntry( 81191 ), CreateSpellEntry( 81192 ), -- Lunar Shower Rank 1/2/3
 				CreateSpellEntry( 16880 ), CreateSpellEntry( 61345 ), CreateSpellEntry( 61346 ), -- Nature's Grace Rank 1/2/3
- 
 			},
-			procs = {		
-
-			}
 		},
 		HUNTER = { 
 			target = {
@@ -342,12 +338,14 @@ local CLASS_FILTERS = {
 				CreateSpellEntry( 37506 ), -- Scatter Shot
 				CreateSpellEntry( 88691 ), -- Marker for death
 				CreateSpellEntry( 1130 ), -- Hunters mark
-			},
+				CreateSpellEntry( 63468 ), -- Hunters mark
+				},
 			player = {
 				CreateSpellEntry( 82749 ), -- killing streak
 				CreateSpellEntry( 3045 ), -- Rapid Fire
 				CreateSpellEntry( 34471 ), --The beast within
 				CreateSpellEntry( 53434 ), --call of the wild
+				CreateSpellEntry( 64420 ), -- Sniper Training
 			},
 			procs = {
 				CreateSpellEntry( 53257 ), -- cobra strikes 
@@ -460,6 +458,7 @@ local CLASS_FILTERS = {
             player = {
                 CreateSpellEntry( 10060 ), -- Power Infusion
                 CreateSpellEntry( 588 ), -- Inner Fire
+				CreateSpellEntry( 73413 ), -- Inner Will
                 CreateSpellEntry( 47585 ), -- Dispersion
 				CreateSpellEntry( 81700 ), -- Archangel
 				CreateSpellEntry( 14751 ), -- Chakra
@@ -513,6 +512,10 @@ local CLASS_FILTERS = {
                 CreateSpellEntry( 55503 ), -- Lifeblood
 				CreateSpellEntry( 13877 ), -- Blade Flurry
 				CreateSpellEntry( 74001 ), -- Combat Readiness
+				CreateSpellEntry( 84745 ), -- comprehension superficielle
+			    CreateSpellEntry( 84746 ), -- comprehension moyenne
+			    CreateSpellEntry( 84747 ), -- comprehension profonde
+				CreateSpellEntry( 58426 ), -- Overkill
             },
             procs = {
                 CreateSpellEntry( 71396 ), -- Rage of the Fallen
@@ -561,10 +564,12 @@ local CLASS_FILTERS = {
 				CreateSpellEntry( 1714 ), -- Curse of Tongue
 				CreateSpellEntry( 18223 ), -- Curse of Exhaustion
 				CreateSpellEntry( 702 ), -- Curse of Weakness
+				CreateSpellEntry( 86105 ), -- Jinx: Curse of the Elements
 			},
 				player = {            
 				CreateSpellEntry( 17941 ), -- Shadow trance 
 				CreateSpellEntry( 64371 ), -- Eradication
+				CreateSpellEntry( 85383 ), -- Improved Soul Fire
 			},
 			procs = {
 				CreateSpellEntry( 86121 ), -- Soul Swap
@@ -1248,13 +1253,13 @@ if ( LAYOUT == 1 ) then
 		dataSource:SetIncludePlayer( classFilter.player ~= nil );
 	end
 
-	local frame = CreateAuraBarFrame( dataSource, oUF_Tukz_player );
+	local frame = CreateAuraBarFrame( dataSource, TukuiPlayer );
 	local yOffset = 1;
 	if ( playerClass == "DEATHKNIGHT" or playerClass == "SHAMAN" or playerClass == "PALADIN" or playerClass == "DRUID" or playerClass == "WARLOCK") then
 		yOffset = yOffset + 8;
 	end
-	frame:SetPoint( "BOTTOMLEFT", oUF_Tukz_player, "TOPLEFT", 0, yOffset );
-	frame:SetPoint( "BOTTOMRIGHT", oUF_Tukz_player, "TOPRIGHT", 0, yOffset );
+	frame:SetPoint( "BOTTOMLEFT", TukuiPlayer, "TOPLEFT", 0, yOffset );
+	frame:SetPoint( "BOTTOMRIGHT", TukuiPlayer, "TOPRIGHT", 0, yOffset );
 	frame:Show(); 
 elseif ( LAYOUT == 2 ) then
 	local targetDataSource = CreateUnitAuraDataSource( "target" );
@@ -1273,18 +1278,18 @@ elseif ( LAYOUT == 2 ) then
 
 	local yOffset = 6;
 	
-	local playerFrame = CreateAuraBarFrame( playerDataSource, oUF_Tukz_player );	
+	local playerFrame = CreateAuraBarFrame( playerDataSource, TukuiPlayer );	
 	playerFrame:SetHiddenHeight( -yOffset );
 	if ( playerClass == "DEATHKNIGHT" or playerClass == "SHAMAN" or playerClass == "PALADIN" or playerClass == "DRUID" or playerClass == "WARLOCK") then
-		playerFrame:SetPoint( "BOTTOMLEFT", oUF_Tukz_player, "TOPLEFT", 0, yOffset + 8 );
-		playerFrame:SetPoint( "BOTTOMRIGHT", oUF_Tukz_player, "TOPRIGHT", 0, yOffset + 8 );
+		playerFrame:SetPoint( "BOTTOMLEFT", TukuiPlayer, "TOPLEFT", 0, yOffset + 8 );
+		playerFrame:SetPoint( "BOTTOMRIGHT", TukuiPlayer, "TOPRIGHT", 0, yOffset + 8 );
 	else
-		playerFrame:SetPoint( "BOTTOMLEFT", oUF_Tukz_player, "TOPLEFT", 0, yOffset );
-		playerFrame:SetPoint( "BOTTOMRIGHT", oUF_Tukz_player, "TOPRIGHT", 0, yOffset );
+		playerFrame:SetPoint( "BOTTOMLEFT", TukuiPlayer, "TOPLEFT", 0, yOffset );
+		playerFrame:SetPoint( "BOTTOMRIGHT", TukuiPlayer, "TOPRIGHT", 0, yOffset );
 	end
 	playerFrame:Show();
 
-	local targetFrame = CreateAuraBarFrame( targetDataSource, oUF_Tukz_player );
+	local targetFrame = CreateAuraBarFrame( targetDataSource, TukuiPlayer );
 	targetFrame:SetPoint( "BOTTOMLEFT", playerFrame, "TOPLEFT", 0, yOffset );
 	targetFrame:SetPoint( "BOTTOMRIGHT", playerFrame, "TOPRIGHT", 0, yOffset );
 	targetFrame:Show();
@@ -1306,24 +1311,24 @@ elseif ( LAYOUT == 3 ) then
 	end
 	trinketDataSource:AddFilter( TRINKET_FILTER, TRINKET_BAR_COLOR );
 
-	local playerFrame = CreateAuraBarFrame( playerDataSource, oUF_Tukz_player );
+	local playerFrame = CreateAuraBarFrame( playerDataSource, TukuiPlayer );
 	playerFrame:SetHiddenHeight( -yOffset );
 	if ( playerClass == "DEATHKNIGHT" or playerClass == "SHAMAN" or playerClass == "PALADIN" or playerClass == "DRUID" or playerClass == "WARLOCK") then
-		playerFrame:SetPoint( "BOTTOMLEFT", oUF_Tukz_player, "TOPLEFT", 0, yOffset + 8 );
-		playerFrame:SetPoint( "BOTTOMRIGHT", oUF_Tukz_player, "TOPRIGHT", 0, yOffset + 8 );
+		playerFrame:SetPoint( "BOTTOMLEFT", TukuiPlayer, "TOPLEFT", 0, yOffset + 8 );
+		playerFrame:SetPoint( "BOTTOMRIGHT", TukuiPlayer, "TOPRIGHT", 0, yOffset + 8 );
 	else
-		playerFrame:SetPoint( "BOTTOMLEFT", oUF_Tukz_player, "TOPLEFT", 0, yOffset );
-		playerFrame:SetPoint( "BOTTOMRIGHT", oUF_Tukz_player, "TOPRIGHT", 0, yOffset );
+		playerFrame:SetPoint( "BOTTOMLEFT", TukuiPlayer, "TOPLEFT", 0, yOffset );
+		playerFrame:SetPoint( "BOTTOMRIGHT", TukuiPlayer, "TOPRIGHT", 0, yOffset );
 	end
 	playerFrame:Show();
 
-	local trinketFrame = CreateAuraBarFrame( trinketDataSource, oUF_Tukz_player );
+	local trinketFrame = CreateAuraBarFrame( trinketDataSource, TukuiPlayer );
 	trinketFrame:SetHiddenHeight( -yOffset );
 	trinketFrame:SetPoint( "BOTTOMLEFT", playerFrame, "TOPLEFT", 0, yOffset );
 	trinketFrame:SetPoint( "BOTTOMRIGHT", playerFrame, "TOPRIGHT", 0, yOffset );
 	trinketFrame:Show();
 	
-	local targetFrame = CreateAuraBarFrame( targetDataSource, oUF_Tukz_player );
+	local targetFrame = CreateAuraBarFrame( targetDataSource, TukuiPlayer );
 	targetFrame:SetHiddenHeight( -yOffset );
 	targetFrame:SetPoint( "BOTTOMLEFT", trinketFrame, "TOPLEFT", 0, yOffset );
 	targetFrame:SetPoint( "BOTTOMRIGHT", trinketFrame, "TOPRIGHT", 0, yOffset );
@@ -1346,26 +1351,26 @@ elseif ( LAYOUT == 4 ) then
 	end
 	trinketDataSource:AddFilter( TRINKET_FILTER, TRINKET_BAR_COLOR );
 
-	local playerFrame = CreateAuraBarFrame( playerDataSource, oUF_Tukz_player );
+	local playerFrame = CreateAuraBarFrame( playerDataSource, TukuiPlayer );
 	playerFrame:SetHiddenHeight( -yOffset );
 	if ( playerClass == "DEATHKNIGHT" or playerClass == "SHAMAN" or playerClass == "PALADIN" or playerClass == "DRUID" or playerClass == "WARLOCK") then
-		playerFrame:SetPoint( "BOTTOMLEFT", oUF_Tukz_player, "TOPLEFT", 0, yOffset + 8 );
-		playerFrame:SetPoint( "BOTTOMRIGHT", oUF_Tukz_player, "TOPRIGHT", 0, yOffset + 8 );
+		playerFrame:SetPoint( "BOTTOMLEFT", TukuiPlayer, "TOPLEFT", 0, yOffset + 8 );
+		playerFrame:SetPoint( "BOTTOMRIGHT", TukuiPlayer, "TOPRIGHT", 0, yOffset + 8 );
 	else
-		playerFrame:SetPoint( "BOTTOMLEFT", oUF_Tukz_player, "TOPLEFT", 0, yOffset );
-		playerFrame:SetPoint( "BOTTOMRIGHT", oUF_Tukz_player, "TOPRIGHT", 0, yOffset );
+		playerFrame:SetPoint( "BOTTOMLEFT", TukuiPlayer, "TOPLEFT", 0, yOffset );
+		playerFrame:SetPoint( "BOTTOMRIGHT", TukuiPlayer, "TOPRIGHT", 0, yOffset );
 	end
 	playerFrame:Show();
 
-	local trinketFrame = CreateAuraBarFrame( trinketDataSource, oUF_Tukz_player );
+	local trinketFrame = CreateAuraBarFrame( trinketDataSource, TukuiPlayer );
 	trinketFrame:SetHiddenHeight( -yOffset );
 	trinketFrame:SetPoint( "BOTTOMLEFT", playerFrame, "TOPLEFT", 0, yOffset );
 	trinketFrame:SetPoint( "BOTTOMRIGHT", playerFrame, "TOPRIGHT", 0, yOffset );
 	trinketFrame:Show();
 	
-	local targetFrame = CreateAuraBarFrame( targetDataSource, oUF_Tukz_target );
-	targetFrame:SetPoint( "BOTTOMLEFT", oUF_Tukz_target, "TOPLEFT", 0, 8 + ( 32 * 3 ) );
-	targetFrame:SetPoint( "BOTTOMRIGHT", oUF_Tukz_target, "TOPRIGHT", 0, 8 + ( 32 * 3 ) );
+	local targetFrame = CreateAuraBarFrame( targetDataSource, TukuiTarget );
+	targetFrame:SetPoint( "BOTTOMLEFT", TukuiTarget, "TOPLEFT", 0, 8 + ( 32 * 3 ) );
+	targetFrame:SetPoint( "BOTTOMRIGHT", TukuiTarget, "TOPRIGHT", 0, 8 + ( 32 * 3 ) );
 	targetFrame:Show();
 else
 	error( "Undefined layout " .. tostring( LAYOUT ) );
