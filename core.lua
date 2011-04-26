@@ -1,4 +1,6 @@
-if ( TukuiUF ~= true and ( TukuiCF == nil or TukuiCF["unitframes"] == nil or not TukuiCF["unitframes"]["enable"] ) ) then return; end
+local T, C, L = unpack(Tukui)
+
+if ( C == nil or C["unitframes"] == nil or not C["unitframes"]["enable"] ) then return; end
 
 --[[ Configuration functions - DO NOT TOUCH
 	id - spell id
@@ -58,18 +60,18 @@ local CAST_SEPARATOR_COLOR = CreateColor( 0, 0, 0, 0.5 );
 local TEXT_MARGIN = 5;
 
 local MASTER_FONT, STACKS_FONT;
-if ( TukuiCF and TukuiCF["media"] and TukuiCF["media"]["uffont"] ) then
+if ( C and C["media"] and C["media"]["uffont"] ) then
 	-- Sets font for all texts
-	MASTER_FONT = { TukuiCF["media"]["uffont"], 12, "OUTLINE" };
+	MASTER_FONT = { C["media"]["uffont"], 12, "OUTLINE" };
 
 	-- Sets font for stack count
-	STACKS_FONT = { TukuiCF["media"]["uffont"], 11, "OUTLINE" };
+	STACKS_FONT = { C["media"]["uffont"], 11, "OUTLINE" };
 else
 	-- Sets font for all texts
-	MASTER_FONT = { [=[Interface\Addons\Tukui\media\Russel Square LT.ttf]=], 12, "OUTLINE" };
+	MASTER_FONT = { [=[Fonts\FRIZQT__.TTF]=], 12, "OUTLINE" };
 
 	-- Sets font for stack count
-	STACKS_FONT = { [=[Interface\Addons\Tukui\media\Russel Square LT.ttf]=], 11, "OUTLINE" };
+	STACKS_FONT = { [=[Fonts\FRIZQT__.TTF]=], 11, "OUTLINE" };
 end
 
 --[[ Permanent aura bars
@@ -1036,7 +1038,7 @@ do
 			end
 			
 			local bar = CreateFrame( "StatusBar", nil, result, nil );
-			bar:SetStatusBarTexture( TukuiCF["media"].normTex );
+			bar:SetStatusBarTexture( C["media"].normTex );
 			if ( bit.band( ICON_POSITION, 2 ) == 2 or bit.band( ICON_POSITION, 4 ) == 4 ) then
 				bar:SetPoint( "TOPLEFT", result, "TOPLEFT", 0, 0 );
 				bar:SetPoint( "BOTTOMRIGHT", result, "BOTTOMRIGHT", 0, 0 );
@@ -1201,7 +1203,7 @@ do
 		
 		local background = result:CreateTexture( nil, "BACKGROUND", nil );
 		background:SetAlpha( BACKGROUND_ALPHA );
-		background:SetTexture( TukuiCF["media"].normTex );
+		background:SetTexture( C["media"].normTex );
 		background:SetPoint( "TOPLEFT", result, "TOPLEFT", 0, 0 );
 		background:SetPoint( "BOTTOMRIGHT", result, "BOTTOMRIGHT", 0, 0 );
 		background:SetVertexColor( 0.15, 0.15, 0.15 );
@@ -1211,7 +1213,7 @@ do
 		border:SetAlpha( BACKGROUND_ALPHA );
 		border:SetFrameStrata( "BACKGROUND" );
 		border:SetBackdrop( {
-			edgeFile = TukuiCF["media"].glowTex, 
+			edgeFile = C["media"].glowTex, 
 			edgeSize = 5,
 			insets = { left = 3, right = 3, top = 3, bottom = 3 }
 		} );
