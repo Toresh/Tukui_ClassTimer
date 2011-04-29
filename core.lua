@@ -127,6 +127,14 @@ local TRINKET_FILTER = {
 		CreateSpellEntry( 33702 ), CreateSpellEntry( 33697 ), CreateSpellEntry( 20572 ), -- Blood Fury (orc racial)
 		CreateSpellEntry( 57933 ), -- Tricks of Trade (15% dmg buff)
 		
+		-- Professions
+        CreateSpellEntry( 74497 ), -- Lifeblood Rank 8 (Herbalism)
+        CreateSpellEntry( 74245 ), -- Landslide (Enchanting)
+        CreateSpellEntry( 74221 ), -- Hurricane (Enchanting)
+
+		--Raid buff
+		CreateSpellEntry( 80627 ), -- Stolen Power
+		
 		-- Racials
 		CreateSpellEntry( 20954 ), -- Stoneform (Dwarf)
 		CreateSpellEntry( 59752 ), -- Every Man for Himself (Human)
@@ -150,6 +158,8 @@ local TRINKET_FILTER = {
 		CreateSpellEntry( 91007 ), -- Bell of Enraging Reasonance
 		CreateSpellEntry( 91816 ), -- Heart of Rage
 		CreateSpellEntry( 92235 ), -- Symbiotic Worm
+		CreateSpellEntry( 91832 ), -- Fury of Angerforge Stacks
+        CreateSpellEntry( 91836 ), -- Fury of Angerforge on use
 		
 		--The Bastion of Twilight
 		CreateSpellEntry( 92126 ), -- Essence of the Cyclone Normal
@@ -170,8 +180,8 @@ local TRINKET_FILTER = {
 		
 		--Druid
 		CreateSpellEntry( 90159 ), -- Resto
-		CreateSpellEntry( 90163 ), -- Moonkin
-		CreateSpellEntry( 90165 ), -- Feral
+		CreateSpellEntry( 90164 ), -- Moonkin
+		CreateSpellEntry( 90166 ), -- Feral
 		
 		--Paladin
 		CreateSpellEntry( 90311 ), -- Holy
@@ -275,7 +285,7 @@ local CLASS_FILTERS = {
 				CreateSpellEntry( 2637 ), -- Hibernate
 				CreateSpellEntry( 2908 ), -- Soothe
 				CreateSpellEntry( 50259 ), -- Feral Charge (Cat) - daze
-				CreateSpellEntry( 45334 ), -- Feral Charge (Bear) - immobilize
+				CreateSpellEntry( 91565 ), -- Feral Charge (Bear) - immobilize
 				CreateSpellEntry( 58180 ), -- Infected Wounds
 				CreateSpellEntry( 6795 ), -- Growl
 				CreateSpellEntry( 5209 ), -- Challenging Roar
@@ -442,37 +452,39 @@ local CLASS_FILTERS = {
 				CreateSpellEntry( 20050 ), CreateSpellEntry( 20052 ), CreateSpellEntry( 20053 ), -- Conviction (Rank1/Rank2/Rank3)
 			},
 		},
-		PRIEST = { 
-			target = { 
+		PRIEST = {
+			target = {
 				CreateSpellEntry( 17 ), -- Power Word: Shield
-                CreateSpellEntry( 6788, true, nil, 1 ), -- Weakened Soul
-                CreateSpellEntry( 139 ), -- Renew
-                CreateSpellEntry( 33076 ), -- Prayer of Mending
-                CreateSpellEntry( 552 ), -- Abolish Disease
-                CreateSpellEntry( 63877 ), -- Pain Suppression
-                CreateSpellEntry( 34914, false, nil, nil, 34914 ), -- Vampiric Touch
-                CreateSpellEntry( 589 ), -- Shadow Word: Pain
-                CreateSpellEntry( 2944 ), -- Devouring Plague
-                CreateSpellEntry( 48153 ), -- Guardian Spirit
+				CreateSpellEntry( 6788, true, nil, 1 ), -- Weakened Soul
+				CreateSpellEntry( 139 ), -- Renew
+				CreateSpellEntry( 41635 ), -- Prayer of Mending
+				CreateSpellEntry( 552 ), -- Abolish Disease
+				CreateSpellEntry( 33206 ), -- Pain Suppression
+				CreateSpellEntry( 47753 ), -- Divine Aegis
+				CreateSpellEntry( 77613 ), -- Grace
+				CreateSpellEntry( 34914, false, nil, nil, 34914 ), -- Vampiric Touch
+				CreateSpellEntry( 589 ), -- Shadow Word: Pain
+				CreateSpellEntry( 2944 ), -- Devouring Plague
+				CreateSpellEntry( 48153 ), -- Guardian Spirit
 				CreateSpellEntry( 77489 ), -- Echo of Light
-            },
-            player = {
-                CreateSpellEntry( 10060 ), -- Power Infusion
-                CreateSpellEntry( 588 ), -- Inner Fire
+			},
+			player = {
+				CreateSpellEntry( 10060 ), -- Power Infusion
+				CreateSpellEntry( 588 ), -- Inner Fire
 				CreateSpellEntry( 73413 ), -- Inner Will
-                CreateSpellEntry( 47585 ), -- Dispersion
+				CreateSpellEntry( 47585 ), -- Dispersion
 				CreateSpellEntry( 81700 ), -- Archangel
 				CreateSpellEntry( 14751 ), -- Chakra
 				CreateSpellEntry( 81208 ), -- Chakra Heal
 				CreateSpellEntry( 81207 ), -- Chakra Renew
 				CreateSpellEntry( 81209 ), -- Chakra Smite
-				CreateSpellEntry( 81206 ), -- Prayer of Healing
-            },
-            procs = {
-                CreateSpellEntry( 63735 ), -- Serendipity
-                CreateSpellEntry( 88690 ), -- Surge of Light
-                CreateSpellEntry( 77487 ), -- Shadow Orb
-                CreateSpellEntry( 71572 ), -- Cultivated Power
+				CreateSpellEntry( 56161 ), -- Prayer of Healing
+			},
+			procs = {
+				CreateSpellEntry( 63735 ), -- Serendipity
+				CreateSpellEntry( 88690 ), -- Surge of Light
+				CreateSpellEntry( 77487 ), -- Shadow Orb
+				CreateSpellEntry( 71572 ), -- Cultivated Power
 				CreateSpellEntry( 81661 ), -- Evangelism
 				CreateSpellEntry( 72418 ), -- Kuhlendes Wissen
 				CreateSpellEntry( 71584 ), -- Revitalize
@@ -596,7 +608,11 @@ local CLASS_FILTERS = {
 				CreateSpellEntry( 18498 ), -- Gag Order
 				CreateSpellEntry( 12809 ), -- Concussion Blow
 				CreateSpellEntry( 6343 ), -- Thunderclap
-				CreateSpellEntry( 12162 ), CreateSpellEntry( 12850 ), CreateSpellEntry( 12868 ), -- Deep Wounds Rank 1, 2 & 3
+				CreateSpellEntry( 12721 ), -- Deep Wounds
+				CreateSpellEntry( 18499 ), -- Berserker Rage
+				CreateSpellEntry( 1134 ), -- Inner Rage
+				CreateSpellEntry( 12880 ), CreateSpellEntry( 14201 ), CreateSpellEntry( 14202 ), -- Enrage Rank 1, 2 & 3
+				CreateSpellEntry( 12966 ), CreateSpellEntry( 12967 ), CreateSpellEntry( 12968 ), -- Flurry Rank 1, 2 & 3
 			},
 			player = {
 				CreateSpellEntry( 469 ), -- Commanding Shout
