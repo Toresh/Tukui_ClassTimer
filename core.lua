@@ -350,6 +350,7 @@ local CLASS_FILTERS = {
 				CreateSpellEntry( 88691 ), -- Marker for death
 				CreateSpellEntry( 1130 ), -- Hunters mark
 				CreateSpellEntry( 63468 ), -- Hunters mark
+				CreateSpellEntry( 53301 ), -- Explosive Shot
 				},
 			player = {
 				CreateSpellEntry( 82749 ), -- killing streak
