@@ -171,6 +171,27 @@ local TRINKET_FILTER = {
 		CreateSpellEntry( 91027 ), -- Heart of Ignacious Stacks
 		CreateSpellEntry( 91041 ), -- Heart of Ignacious on use
 		
+		CreateSpellEntry( 96980 ), -- Accelerated (Vessel of Acceleration)
+		CreateSpellEntry( 97142 ), -- Accelerated (Vessel of Acceleration) H
+		CreateSpellEntry( 96911 ), -- Devour (The Hungerer)
+		CreateSpellEntry( 97125 ), -- Devour (The Hungerer) H
+		CreateSpellEntry( 96988 ), -- Stay of Execution
+		CreateSpellEntry( 97145 ), -- Stay of Execution H
+		CreateSpellEntry( 96945 ), -- Loom of Fate (Spidersilk Spindle)
+		CreateSpellEntry( 97129 ), -- Loom of Fate (Spidersilk Spindle) H
+		CreateSpellEntry( 97007 ), -- Mark of the Firelord (Rune of Zeth)
+		CreateSpellEntry( 97146 ), -- Mark of the Firelord (Rune of Zeth) H
+		CreateSpellEntry( 96907 ), -- Victorious Jaws of Defeat
+		CreateSpellEntry( 97120 ), -- Victorious Jaws of Defeat H
+		CreateSpellEntry( 97008 ), -- Fiery Quintessence
+		CreateSpellEntry( 97176 ), -- Fiery Quintessence H
+		CreateSpellEntry( 97010 ), -- Essence of the Eternal Flame
+		CreateSpellEntry( 97179 ), -- Essence of the Eternal Flame
+		CreateSpellEntry( 97009 ), -- Ancient Petrified Seed
+		CreateSpellEntry( 97177 ), -- Ancient Petrified Seed H
+		-- Matrix Restabilizer
+		-- Apparatus of Khaz'goroth	
+		
 		--Throne of the Four Winds
 		
 		
@@ -392,6 +413,7 @@ local CLASS_FILTERS = {
 				CreateSpellEntry( 44572 ), -- Deep Freeze
 				CreateSpellEntry( 11113 ), -- Blast Wave
 				CreateSpellEntry( 82691 ), -- Ring of Frost
+				CreateSpellEntry( 55021 ), -- Counterspell - Imporved Counterspell Rank 2
 			},
 			player = {
 				CreateSpellEntry( 36032 ), -- Arcane Blast
@@ -412,6 +434,9 @@ local CLASS_FILTERS = {
 				CreateSpellEntry( 48108 ), -- Hot Streak
 				CreateSpellEntry( 64343 ), -- Impact
 				CreateSpellEntry( 83582 ), -- Pyromaniac
+				CreateSpellEntry( 75170 ), -- Lightweave
+				CreateSpellEntry( 74241 ), -- Powertorrent
+				CreateSpellEntry( 96230 ), -- Synapse Springs
 			},
 		},
 		PALADIN = { 
@@ -442,6 +467,9 @@ local CLASS_FILTERS = {
 				CreateSpellEntry( 31482 ), -- Divine Favor
 				CreateSpellEntry( 6940 ), -- Hand of Sacrifice
 				CreateSpellEntry( 84963 ), -- Inquisition
+				CreateSpellEntry( 86669 ), -- Guardian of Ancient Kings (Holy)
+				CreateSpellEntry( 86659 ), -- Guardian of Ancient Kings (Prot)
+				CreateSpellEntry( 87342 ), -- Holy Shield
             },
             procs = {
                 CreateSpellEntry( 59578 ), -- The Art of War

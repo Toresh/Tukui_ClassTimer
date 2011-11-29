@@ -1,4 +1,4 @@
-## Interface: 40100
+## Interface: 40300
 ## Title: |cffC495DDTukui Class Timer|r
 ## Author: Kryso
 ## Version: 3.11
