@@ -192,7 +192,26 @@ local TRINKET_FILTER = {
 		-- Matrix Restabilizer
 		-- Apparatus of Khaz'goroth	
 		
-		--Throne of the Four Winds
+		
+		--Dragon Soul
+		CreateSpellEntry( 109785 ), CreateSpellEntry( 108007 ), CreateSpellEntry( 109786 ), -- Indomitable Pride
+		CreateSpellEntry( 109802 ), CreateSpellEntry( 107982 ), CreateSpellEntry( 109804 ), -- Seal of the Seven Signs
+		CreateSpellEntry( 109742 ), CreateSpellEntry( 107988 ), CreateSpellEntry( 109744 ), -- Creche of the Final Dragon
+		CreateSpellEntry( 109748 ), CreateSpellEntry( 107966 ), CreateSpellEntry( 109750 ), -- Eye of Unmaking
+		CreateSpellEntry( 109811 ), CreateSpellEntry( 107962 ), CreateSpellEntry( 109813 ), -- Heart of Unliving
+		CreateSpellEntry( 109787 ), CreateSpellEntry( 107982 ), CreateSpellEntry( 109789 ), -- Insignia of the Corrupted Mind
+		CreateSpellEntry( 109780 ), CreateSpellEntry( 107968 ), CreateSpellEntry( 109782 ), -- Resolve of Undying
+		CreateSpellEntry( 109774 ), CreateSpellEntry( 107986 ), CreateSpellEntry( 109776 ), -- Soulshifter Vortex
+		CreateSpellEntry( 109709 ), CreateSpellEntry( 107982 ), CreateSpellEntry( 109711 ), -- Starcatcher Compass
+		CreateSpellEntry( 109793 ), CreateSpellEntry( 107970 ), CreateSpellEntry( 109795 ), -- Will of Unbinding
+		CreateSpellEntry( 109717 ), CreateSpellEntry( 107960 ), CreateSpellEntry( 109719 ), -- Wrath of Unchaining
+		CreateSpellEntry( 109791 ), CreateSpellEntry( 107948 ), CreateSpellEntry( 109792 ), -- Reflection of the Light
+		CreateSpellEntry( 109746 ), CreateSpellEntry( 107949 ), CreateSpellEntry( 109747 ), -- Rotting Skull
+		CreateSpellEntry( 109714 ), CreateSpellEntry( 107947 ), CreateSpellEntry( 109715 ), -- Kiroptyric Sigil
+		CreateSpellEntry( 109791 ), CreateSpellEntry( 107948 ), CreateSpellEntry( 109792 ), -- Bottled Wishes
+		CreateSpellEntry( 109778 ), CreateSpellEntry( 107951 ), CreateSpellEntry( 109779 ), -- Fire of the Deep
+		
+		
 		
 		
 		--T11 set procs
