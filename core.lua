@@ -1418,7 +1418,7 @@ elseif ( LAYOUT == 4 ) then
 
 	local playerFrame = CreateAuraBarFrame( playerDataSource, TukuiPlayer );
 	playerFrame:SetHiddenHeight( -yOffset );
-	if ( playerClass == "DEATHKNIGHT" or playerClass == "SHAMAN" or playerClass == "PALADIN" or playerClass == "DRUID" or playerClass == "WARLOCK") then
+	if ( playerClass == "DEATHKNIGHT" or playerClass == "SHAMAN" or playerClass == "PALADIN" or playerClass == "DRUID" or playerClass == "WARLOCK" or playerClass == "ROGUE") then
 		playerFrame:SetPoint( "BOTTOMLEFT", TukuiPlayer, "TOPLEFT", 0, yOffset + 8 );
 		playerFrame:SetPoint( "BOTTOMRIGHT", TukuiPlayer, "TOPRIGHT", 0, yOffset + 8 );
 	else
